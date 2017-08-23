@@ -116,3 +116,34 @@ The Environmental Lighting section contains settings for the skybox, diffuse lig
 
 ![](https://docs.unity3d.com/uploads/Main/GlobalIllumination-5.png)
 
+|   Property |   Function  |
+|:----------:|------------:|
+|**Debug Settings**|	Settings that help you debug your Scene.|
+|**Update Statistics**|	If ticked, the statistics window at the bottom of the Lighting settings window is updated as the Scene changes. This can have an impact on performance during Play mode. For better performance in Play mode, untick this box.|
+|**Light Probe Visualization**|	Use this to filter which [Light Probes](https://docs.unity3d.com/Manual/LightProbes.html) are visualized in the Scene view. The default value is **Only Probes Used By Selection**.|
+|Only Probes Used By Selection|	Only Light Probes that affect the current selection are visualized in the Scene view.|
+|All Probes No Cells|	All Light Probes are visualized in the Scene view.|
+|All Probes With Cells|	All Light Probes are visualized in the Scene view, and the tetrahedrons that are used for interpolation of Light Probe data are also displayed.|
+|None|	No Light Probes are visualized in the Scene view.|
+|**Display Weights**|	When ticked, Unity draws a line from the Light Probe used for the active selection to the positions on the tetrahedra used for interpolation. This is a way to debug probe interpolation and placement problems.|
+|**Display Occlusion**|	When ticked, Unity displays occlusion data for Light Probes if the Mixed lighting mode is [Distance Shadowmask](https://docs.unity3d.com/Manual/LightMode-Mixed-DistanceShadowmask.html) or [Shadowmask](https://docs.unity3d.com/Manual/LightMode-Mixed-Shadowmask.html).|
+
+
+At the bottom of the Scene tab, the **Statistics** window lists information about Lights in the Scene. Lights are separated by type, Meshes, emissive Materials, Light Probes and Reflection Probes.
+
+![](https://docs.unity3d.com/uploads/Main/GlobalIllumination-6.png)
+
+Note also that there is a dockable window called the [Light Explorer](http://mdeditor.infra.hq.unity3d.com/?&_ga=2.141883953.2072518565.1503381887-1300961171.1497254613#LightingExplorer), to help you work with large numbers of Lights.
+
+## Global maps tab
+
+Use the Global maps tab to view the actual textures in use by the lighting system. These include intensity light maps, shadow masks and directionality maps. This is only available when [Baked lighting](https://docs.unity3d.com/Manual/LightMode-Baked.html) or [Mixed lighting](https://docs.unity3d.com/Manual/LightMode-Mixed.html) is used; the preview is blank for [Realtime lighting](https://docs.unity3d.com/Manual/LightMode-Realtime.html).
+
+![](https://docs.unity3d.com/uploads/Main/GlobalIllumination-7.png)
+
+## Object maps tab
+
+Use the **Object maps** tab to see previews of baked textures for the currently selected **GameObject** only, including shadow masks.
+
+![](https://docs.unity3d.com/uploads/Main/GlobalIllumination-8.png)
+
