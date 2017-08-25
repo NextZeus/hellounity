@@ -17,3 +17,6 @@ Spot lights and point lights usually represent artificial light sources and so t
 ## Color and Intensity
 
 A light’s color and intensity (brightness) are properties you can set from the inspector. The default intensity and white color are fine for “ordinary” lighting that you use to apply shading to objects but you might want to vary the properties to produce special effects. For example, a glowing green forcefield might be bright enough to bathe surrounding objects in intense green light; car headlights (especially on older cars) typically have a slight yellow color rather than brilliant white. These effects are most often used with point and spot lights but you might change the color of a directional light if, say, your game is set on a distant planet with a red sun.
+
+### 单词
+* pitfall 陷阱
