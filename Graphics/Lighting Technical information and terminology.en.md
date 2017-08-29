@@ -1,13 +1,13 @@
 # Lighting: Technical information and terminology
 
-* **Surface**: All triangles from all meshes in a Scene together are called the surface of a scene. A surface point is a point within any triangle defined for the Scene.
+* **Surface**: All triangles(三角形) from all meshes in a Scene together are called the surface of a scene. A surface point is a point within any triangle defined for the Scene.
 * **Emitted Light**: This is light that is emitted directly onto the surface of the Scene.
 * **Direct Light**: This is light that is emitted, hits the surface of the Scene and is then reflected into a sensor (for example, the eye’s retina or a camera). A Light’s direct contribution is any direct light that arrives at a sensor from that Light.
-* **Indirect Light**: This is light that is emitted, hits the surface of the Scene at least two times and is ultimately reflected into a sensor. A Light’s indirect contribution is any indirect light that arrives at a sensor from that Light.
+* **Indirect Light**: This is light that is emitted, hits the surface of the Scene at least two times and is ultimately(最终) reflected into a sensor(传感器). A Light’s indirect contribution is any indirect light that arrives at a sensor from that Light.
 
 ![](https://docs.unity3d.com/uploads/Main/LightModes-TechnicalInformation-0.png)
 
-## Reflection of simulated light in a Scene
+## Reflection (反射) of simulated light in a Scene
 
 Rough surfaces scatter incoming light in many directions, illuminating surfaces that are not directly lit from light sources. The rougher the surfaces in a scene, the brighter such shadowed areas will appear. In the past, this effect was approximated by defining one additional ambient light color which was simply added to the result of direct lighting, so that surfaces in shadows would not appear completely black. More sophisticated approximations use a gradient to simulate different ambient colors depending on the orientation of the surface, or even spherical harmonics to have even more complex [ambient lighting](https://docs.unity3d.com/Manual/GlobalIllumination.html).
 
@@ -35,3 +35,9 @@ To recap, the two major issues that need to be addressed are:
 
 1. How to deal with the performance penalty caused by calculating shadows for direct lighting.
 2. How to deal with indirect lighting (note: in the context of real time graphics, Global Illumination is synonymous with indirect lighting, even though the actual meaning encompasses direct lighting as well).
+
+### 单词
+* Emitted Light发射光
+* Direct Light 直射光
+* Indirect Light 间接光
+* 
