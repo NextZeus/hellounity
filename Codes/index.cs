@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class ExampleBehaviourScript: MonBehaviour
+public class ExampleBehaviourScript: MonoBehaviour
 {
     void Update(){
         if(Input.GetKeyDown(KeyCode.R)){
@@ -16,7 +16,7 @@ public class ExampleBehaviourScript: MonBehaviour
     }
 }
 
-public class VariableAndFunctions: MonBehaviour 
+public class VariableAndFunctions: MonoBehaviour 
 {
     int myInt = 5;
     void Start(){
@@ -32,7 +32,7 @@ public class VariableAndFunctions: MonBehaviour
     }
 }
 
-public class BasicSyntax: MonBehaviour 
+public class BasicSyntax: MonoBehaviour 
 {
     void void Start()
     {
@@ -65,4 +65,54 @@ Vector3 result = Vector3.Lerp (from, to, 0.75f);
 void Update ()
 {
     light.intensity = Mathf.Lerp(light.intensity, 8f, 0.5f * Time.deltaTime);
+}
+
+// Destroy
+
+Destroy(gameObject, delayTime);
+
+public class DualAxisExample: MonoBehaviour
+{
+    public float range;
+    public GUIText textOutput;
+
+    void /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update()
+    {
+        float h = Input.GetAxis('Horizontal');
+        float v = Input.GetAxis('Vertical');
+
+        float xpos = h * range;
+        float ypos = v * range;
+        transform.position = new Vector3(xpos, ypos, 0);
+        textOutput.text = "Horizontal Value Returned: "+h.ToString("F2")+"\nVertical Value Returned: "+v.ToString("F2"); 
+    }
+}
+
+public class MouseClick: MonoBehaviour
+{
+    void OnMouseDown()
+    {
+        // 给某个物体一个作用力 踢开
+        rigibody.AddForce(-transform.forward * 500f);
+        rigibody.useGravity = true;
+    }
+}
+
+public class UsingInstantiate: MonoBehaviour
+{
+    public Rigibody rocketPrefab;
+    public Transform barrelEnd;
+
+    void Update()
+    {
+        if(Input.GetButtonDown('Fire1'))
+        {
+            Rigibody rocketInstance;
+            rocketInstance = Instantiate(rocketPrefab, barrelEnd.position, barrelEnd.rotation) as Rigibody;
+            rocketInstance.AddForce(barrelEnd.forward * 5000f);
+        }
+    }
 }
